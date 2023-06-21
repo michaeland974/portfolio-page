@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "Displaying projects",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch:build": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}
