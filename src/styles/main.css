@@ -1,0 +1,26 @@
+@font-face {  font-family: Satoshi-Bold;
+  src: url('./../fonts/Satoshi-Bold.otf'); }
+@font-face {  font-family: Satoshi-Light;
+  src: url('./../fonts/Satoshi-Light.otf'); }
+@font-face {  font-family: Satoshi-LightItalic;
+  src: url('./../fonts/Satoshi-LightItalic.otf'); }
+@font-face {  font-family: Satoshi-Regular;
+  src: url('./../fonts/Satoshi-Regular.otf'); }
+
+:root{
+  --almost-black: #212121;
+  --not-white: #efe6dd;
+  --grey: #21212192;
+}
+
+body{
+  font-family: Satoshi-Regular;
+  color: var(--almost-black);
+  background-color: var(--not-white);
+}
+
+.test{
+  height: 200px;
+  width: 200px;
+  background-color: var(--almost-black);
+}
