@@ -20,14 +20,9 @@
   --fs-xl: clamp(2rem, 2.5vw, 5rem);
 }
 
-body, 
-.content, 
-nav > .wrapper{
+body{
   display: flex;
   flex-direction: column;
-}
-
-body{
   justify-content: space-between;
 
   font-family: Satoshi-Light;
@@ -47,6 +42,8 @@ nav{
 }
 
 nav > .wrapper{
+  display: flex;
+  flex-direction: column;
   gap: 0.25em;
 }
 
@@ -56,3 +53,18 @@ h1{
   padding-top: var(--display-padding);
   font-size: var(--fs-xl);
 }
+
+.content,
+.content main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+#symbol{
+  letter-spacing: -2.5px;
+  color: var(--grey);
+  align-self: center;
+}
+
