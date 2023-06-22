@@ -10,14 +10,15 @@ h1,
 h2,
 h3,
 h4,
+nav,
 p,
 figure,
 blockquote,
 dl,
 dd {
+  padding: 0;
   margin: 0;
-  font-weight: normal;
-  font-style: normal;
+  font: inherit;  
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -25,6 +26,7 @@ ul,
 li{
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */

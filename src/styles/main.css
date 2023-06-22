@@ -11,16 +11,48 @@
   --almost-black: #212121;
   --not-white: #efe6dd;
   --grey: #21212192;
+  --light-grey: #2121214e;
+
+  --display-border: 0.7px solid var(--light-grey);
+  --display-margin: 50%;
+  --display-padding: 1rem;
+  --fs: clamp(1rem, 2.5vw, 1.25rem);
+  --fs-xl: clamp(2rem, 2.5vw, 5rem);
+}
+
+body, 
+.content, 
+nav > .wrapper{
+  display: flex;
+  flex-direction: column;
 }
 
 body{
-  font-family: Satoshi-Regular;
+  justify-content: space-between;
+
+  font-family: Satoshi-Light;
+  font-size: var(--fs);
   color: var(--almost-black);
   background-color: var(--not-white);
+
+  padding: 2rem;
+  height: 100svh;
+  width: 100vw;
 }
 
-.test{
-  height: 200px;
-  width: 200px;
-  background-color: var(--almost-black);
+nav{
+  align-self: flex-start;
+  border-bottom: var(--display-border);
+  padding-bottom: var(--display-padding);
+}
+
+nav > .wrapper{
+  gap: 0.25em;
+}
+
+h1{
+  align-self: flex-end;
+  border-top: var(--display-border);
+  padding-top: var(--display-padding);
+  font-size: var(--fs-xl);
 }
