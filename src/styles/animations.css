@@ -1,0 +1,14 @@
+@keyframes textFadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1, nav{
+  animation: 1s ease-out 0.5s textFadeIn;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
