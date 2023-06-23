@@ -13,21 +13,16 @@
 
 @keyframes border-rotate-top{
   100% { 
-    transform: rotate(68deg);
-    margin-top: var(--symbol-translateY-negative);
-    margin-left: var(--symbol-translateX);
+    transform: rotate(var(--symbol-rotate));
     top: 0;
     left: 0;
-
-    height: 200px;
   } 
 }
 
 @keyframes border-rotate-bottom{
   100% { 
-    transform: rotate(68deg);
-    margin-top: var(--symbol-translateY-negative);
-    margin-left: var(--symbol-translateX-negative);
+    transform: rotate(var(--symbol-rotate));
+    margin-left: var(--symbol-translate-negative); 
     top: 100%;
     left: 100%;
   } 
@@ -45,7 +40,6 @@ h1, nav{
 }
 
 #symbol [position="left"]{
-  background-color: red;
   animation: 1s ease-out 0.5s border-rotate-top;
   animation-fill-mode: both;
 }

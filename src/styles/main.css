@@ -15,10 +15,12 @@
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
   --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
  
-  --symbol-translateY: 17px;
-  --symbol-translateX: calc(var(--symbol-translateY)/2);
-  --symbol-translateY-negative: calc(var(--symbol-translateY) * -1);
-  --symbol-translateX-negative: calc(var(--symbol-translateX) * -1);
+  --symbol-dimension: 18px;
+  --symbol-skew: -20deg;
+  --symbol-rotate: 90deg;
+  --symbol-translate: 17px;
+  --symbol-translate-negative: calc(var(--symbol-translate) * -1);
+  /* --symbol-translateX: calc(var(--symbol-translateY)/2); */
 
   --display-border: 0.7px solid var(--light-grey);
   --display-padding: 1rem;
@@ -86,10 +88,21 @@ h1{
 }
 
 #symbol #colon { transform: translate(-50%, -50%);}
-#symbol [position="left"]{ 
-  transform: translate(var(--symbol-translateX), -50%); 
+#symbol [position="left"], 
+#symbol [position="right"]{
+  height: var(--symbol-dimension);
+  width: var(--symbol-dimension);
+  border-left: 1px solid var(--almost-black);
 }
-#symbol [position="right"]{ 
-  transform: translate(var(--symbol-translateY), -50%); 
+
+#symbol [position="left"]{
+  transform: translate(calc(var(--symbol-translate)/2), -50%) 
+             skew(var(--symbol-skew)); 
 }
+
+#symbol [position="right"]{
+  transform: translate(var(--symbol-translate), -50%) 
+             skew(var(--symbol-skew)); 
+}
+
 
