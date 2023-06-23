@@ -1,9 +1,19 @@
 @keyframes textFadeIn{
-  0% {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes textFadeOut{
+  0% { opacity: 1; }
+  100% { 
     opacity: 0;
+    visibility: hidden;
   }
-  100% {
-    opacity: 1;
+}
+
+@keyframes borderRotate {
+  100% { 
+    transform: rotate(68deg);
   }
 }
 
@@ -11,4 +21,19 @@ h1, nav{
   animation: 1s ease-out 0.5s textFadeIn;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+}
+
+/* Necessary display for animation*/
+#symbol > * { display: inline-block; }
+#colon{
+  animation: 1s ease-out 0.5s textFadeOut;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+#symbol [position="left"], 
+#symbol [position="right"]{
+  animation: 1s ease-out 0.5s borderRotate;
+  animation-iteration-count: 1;
+  animation-fill-mode: both; 
 }

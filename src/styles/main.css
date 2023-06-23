@@ -12,10 +12,8 @@
   --not-white: #efe6dd;
   --grey: #21212192;
   --light-grey: #2121214e;
-
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
  
-
   --display-border: 0.7px solid var(--light-grey);
   --display-padding: 1rem;
   --fs: clamp(1rem, 2.5vw, 1.25rem);
@@ -64,9 +62,25 @@ h1{
   flex: 1;
 }
 
+.content main{
+  position: relative;
+  border: 1px solid red;
+}
+
 #symbol{
-  letter-spacing: -2.5px;
-  color: var(--grey);
+  color: var(--almost-black);
+  letter-spacing: -3px;
+  position: absolute;
   align-self: center;
 }
+
+#symbol > * {
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+}
+
+#symbol #colon { transform: translate(-50%, -50%);}
+#symbol [position="left"]{ transform: translate(7px, -50%); }
+#symbol [position="right"]{ transform: translate(17px, -50%); }
 
