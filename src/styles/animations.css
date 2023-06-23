@@ -1,9 +1,9 @@
-@keyframes textFadeIn{
+@keyframes text-fade-in{
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@keyframes textFadeOut{
+@keyframes text-fade-out{
   0% { opacity: 1; }
   100% { 
     opacity: 0;
@@ -11,29 +11,46 @@
   }
 }
 
-@keyframes borderRotate {
+@keyframes border-rotate-top{
   100% { 
     transform: rotate(68deg);
-  }
+    margin-top: var(--symbol-translateY-negative);
+    margin-left: var(--symbol-translateX);
+    top: 0;
+    left: 0;
+
+    height: 200px;
+  } 
 }
+
+@keyframes border-rotate-bottom{
+  100% { 
+    transform: rotate(68deg);
+    margin-top: var(--symbol-translateY-negative);
+    margin-left: var(--symbol-translateX-negative);
+    top: 100%;
+    left: 100%;
+  } 
+} 
 
 h1, nav{
-  animation: 1s ease-out 0.5s textFadeIn;
-  animation-iteration-count: 1;
+  animation: 1s ease-out 0.5s text-fade-in;
   animation-fill-mode: both;
 }
 
-/* Necessary display for animation*/
-#symbol > * { display: inline-block; }
+#symbol * { display: inline-block; }
 #colon{
-  animation: 1s ease-out 0.5s textFadeOut;
-  animation-iteration-count: 1;
+  animation: 1s ease-out 0.5s text-fade-out;
   animation-fill-mode: both;
 }
 
-#symbol [position="left"], 
-#symbol [position="right"]{
-  animation: 1s ease-out 0.5s borderRotate;
-  animation-iteration-count: 1;
-  animation-fill-mode: both; 
+#symbol [position="left"]{
+  background-color: red;
+  animation: 1s ease-out 0.5s border-rotate-top;
+  animation-fill-mode: both;
 }
+
+#symbol [position="right"]{
+  animation: 1s ease-out 0.5s border-rotate-bottom;
+  animation-fill-mode: both;
+} 

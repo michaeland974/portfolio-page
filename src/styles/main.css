@@ -13,7 +13,13 @@
   --grey: #21212192;
   --light-grey: #2121214e;
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
+  --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
  
+  --symbol-translateY: 17px;
+  --symbol-translateX: calc(var(--symbol-translateY)/2);
+  --symbol-translateY-negative: calc(var(--symbol-translateY) * -1);
+  --symbol-translateX-negative: calc(var(--symbol-translateX) * -1);
+
   --display-border: 0.7px solid var(--light-grey);
   --display-padding: 1rem;
   --fs: clamp(1rem, 2.5vw, 1.25rem);
@@ -28,8 +34,8 @@ body{
   font-family: Satoshi-Light;
   font-size: var(--fs);
   color: var(--almost-black);
-  background: var(--background-gradient);
-
+  background: var(--background-gradient,
+                  --moz-background-gradient);
   padding: 2rem;
   height: 100svh;
   width: 100vw;
@@ -64,23 +70,26 @@ h1{
 
 .content main{
   position: relative;
-  border: 1px solid red;
 }
 
 #symbol{
   color: var(--almost-black);
-  letter-spacing: -3px;
-  position: absolute;
+  font-size: 20px;
+  letter-spacing: -2px;
   align-self: center;
 }
 
 #symbol > * {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%; 
 }
 
 #symbol #colon { transform: translate(-50%, -50%);}
-#symbol [position="left"]{ transform: translate(7px, -50%); }
-#symbol [position="right"]{ transform: translate(17px, -50%); }
+#symbol [position="left"]{ 
+  transform: translate(var(--symbol-translateX), -50%); 
+}
+#symbol [position="right"]{ 
+  transform: translate(var(--symbol-translateY), -50%); 
+}
 
