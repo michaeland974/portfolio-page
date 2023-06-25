@@ -20,7 +20,9 @@
   --symbol-rotate: 90deg;
   --symbol-translate: 17px;
   --symbol-translate-negative: calc(var(--symbol-translate) * -1);
-  /* --symbol-translateX: calc(var(--symbol-translateY)/2); */
+  --border-length: 23vw;
+  --border-length-negative: calc(var(--border-length) * -1);
+  --onload-animation: 1s ease-out 0.5s;
 
   --display-border: 0.7px solid var(--light-grey);
   --display-padding: 1rem;
@@ -75,7 +77,7 @@ h1{
 }
 
 #symbol{
-  color: var(--almost-black);
+  color: var(--light-grey);
   font-size: 20px;
   letter-spacing: -2px;
   align-self: center;
@@ -92,7 +94,7 @@ h1{
 #symbol [position="right"]{
   height: var(--symbol-dimension);
   width: var(--symbol-dimension);
-  border-left: 1px solid var(--almost-black);
+  border-left: 1px solid var(--light-grey);
 }
 
 #symbol [position="left"]{
