@@ -1,5 +1,6 @@
 @keyframes text-fade-in{
   0% { opacity: 0; }
+  50% { opacity: 0.5; }
   100% { opacity: 1; }
 }
 
@@ -12,12 +13,14 @@
 }
 
 @keyframes border-rotate-top{
+  /* 50% { height: var(--border-length); } */
   100% { 
     top: 0;
     left: 0;
-    height: 50vw;
+    height: calc((var(--border-length) * 2) + 4vw);
     transform: rotate(var(--symbol-rotate)) 
-               translate(var(--border-length-negative), var(--border-length-negative));
+               translate(var(--border-length-negative), 
+                         var(--border-length-negative));
   } 
 }
 
@@ -25,10 +28,10 @@
   100% { 
     top: 100%;
     left: 100%;
-    height: 50vw;
+    height: calc((var(--border-length) * 2) + 4vw);
     transform: rotate(var(--symbol-rotate)) 
                translateY(var(--border-length));
-    margin-top: var(--border-length-negative);
+    margin-top: var(--border-length);
     margin-left: var(--symbol-translate-negative); 
   } 
 } 
