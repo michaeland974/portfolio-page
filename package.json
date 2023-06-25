@@ -2,7 +2,7 @@
   "name": "portfolio-page",
   "version": "1.0.0",
   "description": "Displaying projects",
-  "main": "index.js",
+  "main": "listeners.js",
   "scripts": {
     "build": "webpack --watch --config webpack/webpack.config.js",
     "watch:build": "tsc --watch"

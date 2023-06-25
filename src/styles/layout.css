@@ -52,6 +52,7 @@ nav{
   padding-bottom: var(--display-padding);
 }
 
+nav [role="button"] { cursor: pointer; }
 nav > .wrapper{
   display: flex;
   flex-direction: column;
