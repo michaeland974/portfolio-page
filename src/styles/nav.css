@@ -1,0 +1,16 @@
+nav{
+  align-self: flex-start;
+  border-bottom: var(--display-border);
+  padding-bottom: var(--display-padding);
+}
+
+nav > .wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+nav [role="button"] { cursor: pointer; }
+nav [aria-expanded="true"] {
+  font-family: Satoshi-Bold;
+}

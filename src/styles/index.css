@@ -46,19 +46,6 @@ body{
   width: 100vw;
 }
 
-nav{
-  align-self: flex-start;
-  border-bottom: var(--display-border);
-  padding-bottom: var(--display-padding);
-}
-
-nav [role="button"] { cursor: pointer; }
-nav > .wrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
 h1{
   align-self: flex-end;
   border-top: var(--display-border);
