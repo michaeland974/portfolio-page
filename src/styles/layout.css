@@ -22,8 +22,8 @@
   --symbol-translate-negative: calc(var(--symbol-translate) * -1);
   --border-length: 23vw;
   --border-length-negative: calc(var(--border-length) * -1);
-  --border-translate: 1vw;
-  --onload-animation: 1s ease-out 0.5s;
+  --border-translate-media: 1vw;
+  --onload-animation: 1s cubic-bezier(0.18, 0.92, 1, 1) 0.5s;
 
   --display-border: 0.7px dotted red;
   --display-padding: 1rem;
@@ -55,7 +55,7 @@ nav{
 nav > .wrapper{
   display: flex;
   flex-direction: column;
-  gap: 0.25em;
+  gap: 0.5em;
 }
 
 h1{
@@ -65,15 +65,15 @@ h1{
   font-size: var(--fs-xl);
 }
 
-.content,
-.content main{
+.layout,
+.layout main{
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
 }
 
-.content main{
+.layout main{
   position: relative;
 }
 

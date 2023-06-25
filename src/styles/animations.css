@@ -77,8 +77,8 @@ h1, nav{
         left: 0;
         height: calc((var(--border-length) * 2) + 4vw);
         transform: rotate(var(--symbol-rotate)) 
-                   translate(calc(var(--border-length-negative) - var(--border-translate)), 
-                             calc(var(--border-length-negative) - var(--border-translate)));
+                   translate(calc(var(--border-length-negative) - var(--border-translate-media)), 
+                             calc(var(--border-length-negative) - var(--border-translate-media)));
         border-color: var(--light-grey);                     
       } 
     }
@@ -90,8 +90,8 @@ h1, nav{
         height: calc((var(--border-length) * 2) + 4vw);
         transform: rotate(var(--symbol-rotate)) 
                    translateY(var(--border-length));
-        margin-top: calc(var(--border-length-negative) - var(--border-translate));
-        margin-left: calc(var(--symbol-translate-negative) - var(--border-translate)); 
+        margin-top: calc(var(--border-length-negative) - var(--border-translate-media));
+        margin-left: calc(var(--symbol-translate-negative) - var(--border-translate-media)); 
         border-color: var(--light-grey);
       } 
     } 
@@ -99,6 +99,6 @@ h1, nav{
 
 @media screen and (min-width: 1000px){
   :root{
-    --border-translate: 1.5vw;
+    --border-translate-media: 1.5vw;
   }
 }
