@@ -23,9 +23,8 @@
   --border-length: 23vw;
   --border-length-negative: calc(var(--border-length) * -1);
   --border-translate-media: 1vw;
-  --onload-animation: 1s cubic-bezier(0.18, 0.92, 1, 1) 0.5s;
+  --onload-animation: 0.9s cubic-bezier(0, 1, 1, 1) 0.65s;
 
-  --display-border: 0.7px dotted red;
   --display-padding: 1rem;
   --fs: clamp(1rem, 2.5vw, 1.25rem);
   --fs-xl: clamp(2rem, 2.5vw, 5rem);
@@ -48,7 +47,6 @@ body{
 
 h1{
   align-self: flex-end;
-  border-top: var(--display-border);
   padding-top: var(--display-padding);
   font-size: var(--fs-xl);
 }

@@ -58,10 +58,6 @@ h1, nav{
 #symbol [position="right"]{
   animation: var(--onload-animation) border-rotate-bottom;
   animation-fill-mode: both;
-} 
-
-#symbol [position="left"][highlighted="true"]{
-  --border-length: 50vw;
 }
 
 @media screen and (min-width: 600px), 
