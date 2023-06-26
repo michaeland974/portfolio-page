@@ -11,6 +11,9 @@
   --almost-black: #212121;
   --not-white: #efe6dd;
   --grey: #21212192;
+  --blue: #76A4B3;
+  --green: #61875B;
+  --red: #A34546;
   --light-grey: #2121214e;
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
   --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
