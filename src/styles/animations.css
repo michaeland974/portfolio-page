@@ -21,7 +21,7 @@
     transform: rotate(var(--symbol-rotate)) 
                translate(var(--border-length-negative), 
                          var(--border-length-negative));
-    border-color: var(--light-grey);                     
+    border-color: var(--light-grey);     
   } 
 }
 
@@ -60,6 +60,10 @@ h1, nav{
   animation-fill-mode: both;
 } 
 
+#symbol [position="left"][highlighted="true"]{
+  --border-length: 50vw;
+}
+
 @media screen and (min-width: 600px), 
                        (orientation: landscape) {
  :root{ --border-length: 12vw; }
@@ -79,7 +83,7 @@ h1, nav{
         transform: rotate(var(--symbol-rotate)) 
                    translate(calc(var(--border-length-negative) - var(--border-translate-media)), 
                              calc(var(--border-length-negative) - var(--border-translate-media)));
-        border-color: var(--light-grey);                     
+        border-color: var(--light-grey);      
       } 
     }
     @keyframes border-rotate-bottom{

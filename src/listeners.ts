@@ -1,37 +1,47 @@
-type Sections = 'aboutMe' | 'projects'| 'contactMe'
+const nav: (HTMLElement | null)[] = [
+  document.querySelector("[aria-controls='about-me']"),
+  document.querySelector("[aria-controls='projects']"),
+  document.querySelector("[aria-controls='get-in-touch']")
+];
 
-const nav: Record<Sections, HTMLLIElement | null> = {
-  aboutMe: document.querySelector("[aria-controls='about-me']"),
-  projects: document.querySelector("[aria-controls='projects']"),
-  contactMe: document.querySelector("[aria-controls='get-in-touch']"),
-}
-
-const views: Record<Sections, HTMLElement | null> = {
-  aboutMe: document.querySelector('#about-me'),
-  projects: document.querySelector('#projects'),
-  contactMe: document.querySelector('#get-in-touch')
-}
-
-addListeners(Object.values(nav));
-
-function addListeners(elements: (HTMLElement | null)[]){
+(function (elements: (HTMLElement | null)[]) {
   elements.forEach((el) => {
     if(el){
-      el.addEventListener('click', toggleAria);   
+      el.addEventListener('click', toggleAttributes);   
       el.addEventListener('keypress', clickOnKey);
     }
   });
-}
+})(nav);
 
-function toggleAria(this: HTMLElement){
-  const value: boolean = JSON.parse(this.getAttribute('aria-expanded') as string);
-  this.setAttribute('aria-expanded', JSON.stringify(!value));
-  
-  const siblings = this.parentElement?.children;
-  if(siblings){
-    const notSelected = [...siblings].filter((el) => el !== this);
-    notSelected.forEach((el) => el.setAttribute('aria-expanded', 'false'));
+function toggleAttributes(this: HTMLElement){
+  const leftBorder: HTMLElement | null = document.querySelector('#symbol [position="left"]');
+  const view: HTMLElement | null = document.getElementById(`${this.getAttribute('aria-controls')}`);
+  const isExpanded = booleanConvert(this, 'aria-expanded');
+
+  this.setAttribute('aria-expanded', JSON.stringify(!isExpanded));
+  unselectSiblings(this, 'aria-expanded');
+
+  if(view && leftBorder){
+    const isSelected = booleanConvert(view, 'aria-selected');
+    view.setAttribute('aria-selected', JSON.stringify(!isSelected));
+    leftBorder.setAttribute('highlighted', JSON.stringify(!isSelected));
+      unselectSiblings(view, 'aria-selected');
   }
+  
+  function unselectSiblings(element: HTMLElement | null, 
+                            attribute: string ) {
+    const siblings = element?.parentElement?.children;
+      if(siblings){
+        const notSelected = [...siblings].filter((el) => el !== element);
+        notSelected.forEach((el) => {
+          el.setAttribute(attribute, 'false');
+        });
+      }
+  };
+
+   function booleanConvert(el: HTMLElement, attribute: string): boolean{
+    return JSON.parse(el.getAttribute(attribute) as string);
+  }; 
 }
 
 function clickOnKey(this: HTMLElement, e: Event){
