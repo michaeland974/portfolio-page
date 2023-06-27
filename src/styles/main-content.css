@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 1em;
 
   height: 100%;
 
@@ -26,3 +27,8 @@
 .view h2{
   font-family: Satoshi-Regular; 
 }
+
+#about-me p{
+  text-indent: 1em;
+}
+
