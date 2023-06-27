@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" 
         content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#efe6dd" />
   <link href="styles/reset.css" rel="stylesheet">
+  <link href="styles/index.css" rel="stylesheet">
   <link href="styles/nav.css" rel="stylesheet"> 
   <link href="styles/main-content.css" rel="stylesheet">
-  <link href="styles/index.css" rel="stylesheet">
   <link href="styles/animations.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-32x32.png"/>
     <script type="module" src="listeners.js" defer></script>
@@ -38,9 +39,7 @@
         </span>
         
         <div class="content">
-          <section class="view" id="about-me"
-                   aria-selected="false">
-            <h2>Enthusiastic in all things web development</h2>
+          <section class="view" id="about-me" aria-selected="false">
             <p>
               I am currently working in the restaurant industry, but looking to make a 
               career transition into a front-end developer position. Originally, I learned 
@@ -50,20 +49,61 @@
               on learning client-side languages, but have a strong interest in backend development, as well as design.
             </p>
           </section>
-          <section class="view" id="projects"
+
+          <section class="view" id="projects" aria-selected="false">
+            <div>
+              <div class="header">
+                <h2>Junk Drawer</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://www.google.com/">
+                    <span class="project-link-icon">&#128279;</span>
+                  </a>
+                  <a target="_blank" href="https://github.com/michaeland974/junk-drawer-app">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div>
+              </div>
+              <p>Widgets all on one page</p>
+            </div>
+            
+            <div>
+              <div class="header">
+                <h2>National Park Service News</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://www.google.com/">
+                    <span class="project-link-icon">&#128279;</span>
+                  </a>
+                  <a target="_blank" href="https://github.com/michaeland974/nps-app">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div>
+              </div>
+              <p>You can check out the news. The data is retrieved from the
+                <a target="_blank" href="https://www.nps.gov/subjects/developer/api-documentation.htm">
+                  NPS API
+                </a>.
+              </p>
+            </div>
+
+            <div>
+              <div class="header">
+                <h2>Simplify for Youtube</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://github.com/michaeland974/chrome-ext-youtube">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div> 
+              </div>
+              <p>A chrome extension to declutter the Youtube homepage.</p>
+            </div>
+          </section>
+          <section class="view" id="get-in-touch"
                    aria-selected="false">
-            ProjectsLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            GetINTOUChLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis no
             strud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
             irure dolor in reprehenderit in volupta
             te velit esse cillum dolore eu fugiat nulla pariatur.
-          </section>
-          <section class="view" id="get-in-touch"
-                   aria-selected="false">
-            <h2>Michael Anderson</h2>
-            <p>
-              Email me at <a href="mailto:micanderson29@gmail.com">micanderson29@gmail.com</a>
-            </p>
           </section>
         </div>
       </main>
