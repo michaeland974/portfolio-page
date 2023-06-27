@@ -8,7 +8,6 @@
   src: url('./../fonts/Satoshi-Regular.otf'); }
 @font-face {  font-family: Emoji;
   src: url('./../fonts/NotoEmoji-Regular.ttf');
-  font-display: swap;
 }
 
 :root{
