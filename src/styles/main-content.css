@@ -8,8 +8,9 @@
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  gap: 1em;
 
   height: 100%;
 
@@ -23,6 +24,26 @@
   visibility: visible;
 }
 
-.view h2{
-  font-family: Satoshi-Regular; 
+#about-me p{ text-indent: 1em; }
+#get-in-touch{ align-items: center; }
+#get-in-touch div{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+a:link{
+  color: rgba(0, 0, 255, 0.71);
+}
+
+#github-icon{
+  height: var(--fs-xl);
+  width: var(--fs-xl);
+}
+
+@media screen and (min-width: 600px), 
+                  (orientation: landscape) {
+  #about-me p{ width: 80%; }
+}
+
+
