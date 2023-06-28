@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#efe6dd" />
+  <link href="styles/reset.css" rel="stylesheet">
+  <link href="styles/index.css" rel="stylesheet">
+  <link href="styles/nav.css" rel="stylesheet"> 
+  <link href="styles/main-content.css" rel="stylesheet">
+  <link href="styles/animations.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png"/>
+    <script type="module" src="listeners.js" defer></script>
+  <title>Portfolio</title>
+</head>
+  <body>
+    <div class="layout">
+      <nav>
+        <ul class="wrapper">
+          <li tabindex="0" role="button"
+              aria-expanded="false"
+              aria-controls="about-me">About me</li>
+          <li tabindex="0" role="button" 
+              aria-expanded="false"
+              aria-controls="projects">Projects</li>
+          <li tabindex="0" role="button" 
+              aria-expanded="false"
+              aria-controls="get-in-touch">Get in touch</li>
+        </ul>
+      </nav>
+             
+      <main>
+        <span id="symbol">
+        <!--    ://    -->
+          <span id="colon">:</span>
+          <span position="left" highlighted="false"></span>
+          <span position="right"></span>
+        </span>
+        
+        <div class="content">
+          <section class="view" id="about-me" aria-selected="false">
+            <p>
+              I am currently working in the restaurant industry, but looking to make a 
+              career transition into a front-end developer position. Originally, I learned 
+              Javascript through <a target="_blank" href="https://www.theodinproject.com/">The Odin Project</a>, 
+              and have then continued with self-education. Outside of work, 
+              most of my time is spent developing projects and websites. I have mainly focused 
+              on learning client-side languages, but have a strong interest in backend development, as well as design.
+            </p>
+          </section>
+
+          <section class="view" id="projects" aria-selected="false">
+            <div>
+              <div class="header">
+                <h2>Junk Drawer</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://junk-drawer.onrender.com">
+                    <span class="project-link-icon">&#128279;</span>
+                  </a>
+                  <a target="_blank" href="https://github.com/michaeland974/junk-drawer-app">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div>
+              </div>
+              <p>Widgets all on one page</p>
+            </div>
+            
+            <div>
+              <div class="header">
+                <h2>National Park Service News</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://nps-news.onrender.com/">
+                    <span class="project-link-icon">&#128279;</span>
+                  </a>
+                  <a target="_blank" href="https://github.com/michaeland974/nps-app">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div>
+              </div>
+              <p>You can check out the news. The data is retrieved from the
+                <a target="_blank" href="https://www.nps.gov/subjects/developer/api-documentation.htm">
+                  NPS API
+                </a>.
+              </p>
+            </div>
+
+            <div>
+              <div class="header">
+                <h2>Simplify for Youtube</h2>
+                <div class="project-links">
+                  <a target="_blank" href="https://github.com/michaeland974/chrome-ext-youtube">
+                    <img src="github-mark.png" alt="github-link" class="github-icon">
+                  </a>
+                </div> 
+              </div>
+              <p>A chrome extension to declutter the Youtube homepage.</p>
+            </div>
+          </section>
+          <section class="view" id="get-in-touch" aria-selected="false">
+            <div>
+              <h2>Michael Anderson</h2>
+              <a target="_blank" href="https://github.com/michaeland974">
+                <img src="github-mark.png" alt="github-link" class="github-icon">
+              </a>
+            </div>
+            <a href="mailto:micanderson29@gmail.com">micanderson29@gmail.com</a>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <h1>Front-End Developer</h1>
+  </body>
+</html>
