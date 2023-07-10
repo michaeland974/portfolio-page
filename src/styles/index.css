@@ -3,7 +3,10 @@
 @font-face {  font-family: Satoshi-Light;
   src: url('./../fonts/Satoshi-Light.otf'); }
 @font-face {  font-family: Satoshi-LightItalic;
-  src: url('./../fonts/Satoshi-LightItalic.otf'); }
+  src: url('./../fonts/Satoshi-LightItalic.otf'); 
+  font-style: normal;
+  font-weight: 400;
+}
 @font-face {  font-family: Satoshi-Regular;
   src: url('./../fonts/Satoshi-Regular.otf'); }
 @font-face {  font-family: Emoji;
