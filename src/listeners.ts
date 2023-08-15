@@ -5,6 +5,15 @@ const nav: (HTMLElement | null)[] = [
 ];
 
 (function (elements: (HTMLElement | null)[]) {
+  window.addEventListener('hashchange', () => {
+    const value = (window.location.hash).substring(1) ?? '';
+    const isValid = elements.includes(document.querySelector(`[aria-controls='${value}']`));
+    if(isValid){
+      const el = document.querySelector(`[aria-controls='${value}']`) as HTMLElement;
+      el.click();
+    }
+  })
+
   elements.forEach((el) => {
     if(el){
       el.addEventListener('click', toggleAttributes);   
