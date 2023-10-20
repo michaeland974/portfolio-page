@@ -1,0 +1,30 @@
+#svg{
+  --lens-grey:#333333d8;
+  --lens-white: #DBDBDB;
+  --glasses-grey: #323232;
+
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.frames{
+  fill: var(--almost-black);
+}
+
+.lens{
+  fill: var(--glasses-grey);
+}
+
+.reflect{
+  fill: var(--lens-white);
+}
+
+.corner-circle{
+  fill: white;
+}
+
+
