@@ -24,6 +24,12 @@
   --red: #A34546;
   --red-comp: #FA696B;
   --light-grey: #2121214e;
+
+  --text: #e3d4b7;
+  --dark: #422a6d;
+  --highlighting: #f33a2a;
+  --whiteish: #fffaef;
+
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
   --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
  
@@ -50,13 +56,13 @@ body{
 
   font-family: Satoshi-Light;
   font-size: var(--fs);
-  color: var(--almost-black);
-  background: var(--background-gradient,
-                  --moz-background-gradient);
+  color: var(--text);
+  background-color: var(--almost-black);
   padding: 2rem;
   height: 100svh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .layout,
