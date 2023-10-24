@@ -63,55 +63,12 @@ body{
   color: var(--almost-black);
 
   background: rgb(255,250,239);
-  background: linear-gradient(140deg, var(--text) 40%, var(--fade-to) 100%);
+  background: linear-gradient(140deg, var(--text) 45%, var(--fade-to) 100%);
 
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-/* 
-.layout,
-.layout main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.layout main{
-  position: relative;
-}
-
-#symbol{
-  color: var(--almost-black);
-  font-size: 20px;
-  letter-spacing: -2px;
-  align-self: center;
-}
-
-#symbol > * {
-  position: absolute;
-  top: 50%;
-  left: 50%; 
-}
-
-#symbol #colon { transform: translate(-50%, -50%);}
-#symbol [position="left"], 
-#symbol [position="right"]{
-  height: var(--symbol-dimension);
-  width: var(--symbol-dimension);
-  border-left: 1px solid var(--almost-black);
-}
-
-#symbol [position="left"]{
-  transform: translate(calc(var(--symbol-translate)/2), -50%) 
-             skew(var(--symbol-skew)); 
-}
-
-#symbol [position="right"]{
-  transform: translate(var(--symbol-translate), -50%) 
-             skew(var(--symbol-skew)); 
-} */
 
 
 

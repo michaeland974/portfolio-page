@@ -5,20 +5,25 @@ body > section{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.about-me{
+  align-items: center;  
   color: var(--dark);
 }
 
-.about-me .wrapper{
+section li{
+  list-style-image: url('./../svg/bullet-point.svg');
+}
+
+section li::marker{
+  font-size: 1.5em;
+}
+
+.about-me.wrapper{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.about-me h1{
+section h1{
   font-size: var(--fs-xl);
   font-family: Satoshi-Bold;
   color: var(--dark);
@@ -27,8 +32,11 @@ body > section{
   align-self: flex-start;
 }
 
-#fav-font{
+.favs{
   font-family: 'Courier New', Courier, monospace !important;
+  font-weight: bold;
+  text-decoration: underline var(--whiteish);
+  text-underline-offset: 5px;
 }
 
 .scrollspy{
@@ -41,6 +49,41 @@ body > section{
   opacity: 1;
   transform: translateX(0);
 }
+
+.get-in-touch img{
+  height: 30px;
+  width: 30px;
+  transition: transform 1s;
+}
+
+.get-in-touch a{
+  color: var(--dark);
+}
+
+.get-in-touch img:hover{
+  transform: scale(1.2);
+}
+
+.get-in-touch .wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.get-in-touch h1{
+  align-self: center;
+}
+
+.get-in-touch .contact{
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.5em 0 0.5em 0;
+}
+  
+  
+
 
 
 
