@@ -1,83 +1,45 @@
-.content{
-  display: grid;
-  height: 100%;
-}
+body > section{
+  width: 100vw;
+  height: 100svh;
 
-.view{
-  grid-column: 1;
-  grid-row: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 1em;
-  height: 100%;
-
-  opacity: 0;
-  visibility: hidden;
-	transition: all cubic-bezier(0, 1, 0.5, 1) 0.6s;
-} 
-
-.view[aria-selected="true"]{
-  opacity: 1;
-  visibility: visible;
-}
-
-.view h2{ font-family: Satoshi-Regular; }
-.view .header,
-.project-links{
-  display: flex;
   align-items: center;
-  gap: 1em;
 }
 
-.view#projects{
-  gap: 1em;
+.about-me{
+  color: var(--dark);
 }
 
-#projects{
-  display: grid;
-  align-content: center;
-}
-
-#projects .note{
-  opacity: 0;
-  visibility: hidden;
-  font-family: Satoshi-LightItalic;
-  color: var(--grey);
-  transition: all cubic-bezier(0, 1, 0.5, 1) 0.6s;
-}
-
-#projects > div:hover > .note{
-  opacity: 1;
-  visibility: visible;
-}
-
-#get-in-touch div{
+.about-me .wrapper{
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-#about-me p{ 
-  text-indent: 1em; 
+.about-me h1{
+  font-size: var(--fs-xl);
+  font-family: Satoshi-Bold;
+  color: var(--dark);
+  text-decoration: underline double var(--highlighting);
+  text-underline-offset: 5px;
+  align-self: flex-start;
 }
 
-@media screen and (min-width: 600px), 
-                  (orientation: landscape) {
-  #about-me p{ width: 80%; }
+#fav-font{
+  font-family: 'Courier New', Courier, monospace !important;
 }
 
-.project-link-icon{ font-family: Emoji; }
-.github-icon{
-  height: var(--fs-xl);
-  width: var(--fs-xl);
+.scrollspy{
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 1s;
 }
 
-.project-links a:link, 
-.project-links a:visited{
-  color: var(--almost-black);
-  text-decoration: none;
+.scrollspy.is-visible{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 

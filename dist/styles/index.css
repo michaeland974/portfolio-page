@@ -29,6 +29,7 @@
   --dark: #422a6d;
   --highlighting: #f33a2a;
   --whiteish: #fffaef;
+  --fade-to: #C5A7D4;
 
   --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
   --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
@@ -46,25 +47,29 @@
   --display-padding: 1rem;
   --fs: clamp(1rem, 2.5vw, 1.25rem);
   --fs-xl: clamp(2rem, 2.5vw, 5rem);
+
+  --animate-time: 2s;
 }
 
 body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 
   font-family: Satoshi-Light;
   font-size: var(--fs);
-  color: var(--text);
-  background-color: var(--almost-black);
-  padding: 2rem;
-  height: 100svh;
+  color: var(--almost-black);
+
+  background: rgb(255,250,239);
+  background: linear-gradient(140deg, var(--text) 40%, var(--fade-to) 100%);
+
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
+/* 
 .layout,
 .layout main{
   display: flex;
@@ -106,7 +111,7 @@ body{
 #symbol [position="right"]{
   transform: translate(var(--symbol-translate), -50%) 
              skew(var(--symbol-skew)); 
-}
+} */
 
 
 

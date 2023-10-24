@@ -1,3 +1,50 @@
+@keyframes CircleZoom{
+  0%{
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    visibility: 1;
+  }
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    transform: scale(100);
+    opacity: 0;
+    visibilty: 0;
+  }
+}
+
+@keyframes CircleZoomLarge{
+  0%{
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    visibility: 1;
+  }
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    transform: scale(100);
+    opacity: 0;
+    visibilty: 0;
+  }
+}
+
+@keyframes AbsoluteHide{
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    opacity: 0;
+    visibility: 0;
+  }
+}
+
 @keyframes ColorFadeLens{
   33% {
     fill: var(--lens3)
@@ -52,7 +99,7 @@
   }
 }
 
-#svg{
+svg{
   --lens-grey:#333333d8;
   --lens-white: #c8c8c8;
   --glasses-grey: #323232;
@@ -73,7 +120,48 @@
   --lens3comp: #197D52;
 }
 
-.lens{
+#svg-wrapper{
+  /* --animate-time: 2s; */
+
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  z-index: 2;
+  background-color: var(--almost-black);
+
+  animation: AbsoluteHide 2.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg-wrapper::after{
+  content:"";
+  border-radius: 50%;
+  background-color: #e3d4b7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  animation: CircleZoom 3s linear;
+  animation-delay: calc(var(--animate-time) * 0.75);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg .lens{
   fill: var(--lens3);
   animation: ColorFadeLens var(--animate-time);
   -moz-animation-fill-mode: forwards;
@@ -82,7 +170,7 @@
   animation-fill-mode: forwards;
 }
 
-.frames{
+#svg .frames{
   fill: var(--frame3);
   animation: ColorFadeFrame  var(--animate-time);
   -moz-animation-fill-mode: forwards;
@@ -91,7 +179,7 @@
   animation-fill-mode: forwards;
 }
 
-.reflect{
+#svg .reflect{
   fill: var(--lens3comp);
   animation: ColorFadeReflect var(--animate-time);
   -moz-animation-fill-mode: forwards;
@@ -100,7 +188,7 @@
   animation-fill-mode: forwards;
 }
 
-.corner-circle{
+#svg .corner-circle{
   fill: var(--dot3);
   animation: ColorFadeDot var(--animate-time);
   -moz-animation-fill-mode: forwards;
@@ -108,3 +196,4 @@
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+

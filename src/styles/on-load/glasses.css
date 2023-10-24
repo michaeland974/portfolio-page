@@ -16,6 +16,24 @@
   }
 }
 
+@keyframes CircleZoomLarge{
+  0%{
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    visibility: 1;
+  }
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    transform: scale(100);
+    opacity: 0;
+    visibilty: 0;
+  }
+}
+
 @keyframes AbsoluteHide{
   75%{
     opacity: 1;
@@ -135,7 +153,7 @@ svg{
   transform: translate(-50%, -50%);
   z-index: 2;
 
-  animation: CircleZoom 3.5s linear;
+  animation: CircleZoom 3s linear;
   animation-delay: calc(var(--animate-time) * 0.75);
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
