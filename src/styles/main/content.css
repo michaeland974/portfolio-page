@@ -10,11 +10,11 @@ body > section{
   padding: 2em;
 }
 
-section li{
+.about-me li{
   list-style-image: url('./../../svg/bullet-point.svg');
 }
 
-section li::marker{
+.about-me li::marker{
   font-size: 1.5em;
 }
 
@@ -23,6 +23,7 @@ section li::marker{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 section h1{
@@ -74,18 +75,46 @@ section h1{
   padding: 0.5em 0 0.5em 0;
 }
 
-.projects ul{
-  display: flex;
-  flex-direction: column;
-} 
 
-.projects .title, 
-.projects .project-links{
+.project-links, 
+.title{
   display: flex;
-  flex-direction: row;
   gap: 0.5em;
 }
 
+.projects li{
+  list-style-image: url('./../../svg/bullet-point.svg');
+}
+
+.projects li::marker{
+  line-height: 1.5em;
+}
+
+.projects ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em
+}
+
+.title{
+  font-family: Satoshi-Bold;
+}
+
+.projects h1{
+  padding-bottom: 0.5em;
+}
+
+.project-tags .note{
+  font-family: Satoshi-LightItalic;
+  opacity: 0;
+  visibility: 0;
+  transition: all 0.2s ease-out;
+}
+
+.project-tags:hover > .note{
+  opacity: 1;
+  visibility: 1;
+}
 
 
 

@@ -54,6 +54,7 @@ header[role="banner"] > #icon{
   header[role="banner"]{
     top: 0;
     background-color: var(--text);
+    z-index: 4;
   }
 
   header[role="banner"] > #icon{
