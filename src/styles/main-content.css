@@ -7,6 +7,7 @@ body > section{
   justify-content: center;
   align-items: center;  
   color: var(--dark);
+  padding: 2em;
 }
 
 section li{

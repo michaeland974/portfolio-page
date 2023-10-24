@@ -18,13 +18,13 @@
 
 header[role="banner"]{
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
-  width: 200px;
-  margin: 1em 0 0 1.5em;
-  /* display: flex; 
-  flex-direction: column;
-  align-items: center; */
+  height: 100px;
+  width: 120vw;
+  padding: 1em 0 0 1.5em;
+  /* margin: 1em 0 0 1.5em; */
+  z-index: 3;
 
   animation: LongVisible calc(var(--animate-time) * 2) linear;
   -moz-animation-fill-mode: forwards;
@@ -49,6 +49,23 @@ header[role="banner"] > #icon{
   opacity: 0.3;
 }
 
+@media only screen and (max-width: 1200px) {
+  header[role="banner"]{
+    top: 0;
+    background-color: var(--text);
+  }
+
+  header[role="banner"] > #icon{
+    top: -10px;
+    left: 40px;
+    opacity: 0.3;
+  }
+
+  header[role="banner"] > span{
+  top: 40px;
+  }
+}
+
 #icon .frames{
   fill: var(--almost-black);
 }
@@ -64,24 +81,5 @@ header[role="banner"] > #icon{
 #icon .corner-circle{
   fill: var(--highlighting);
 }
-
-/* #icon::before{
-  content: "Front-End Developer";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 200px;
-  width: 200px;
-  color: var(--dark);
-
-  animation: LongVisible calc(var(--animate-time) * 2) linear;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-
- */
 
 
