@@ -103,9 +103,9 @@ svg{
 }
 
 #svg-wrapper{
-  --animate-time: 2s;
+  /* --animate-time: 2s; */
 
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -115,7 +115,7 @@ svg{
   display: flex;
   justify-content: center; 
   align-items: center;
-  z-index: -3;
+  z-index: 2;
   background-color: var(--almost-black);
 
   animation: AbsoluteHide 2.5s linear;
@@ -133,7 +133,7 @@ svg{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -3;
+  z-index: 2;
 
   animation: CircleZoom 3.5s linear;
   animation-delay: calc(var(--animate-time) * 0.75);

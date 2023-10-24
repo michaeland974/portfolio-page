@@ -1,0 +1,45 @@
+@keyframes AbsoluteVisible{
+  0%{
+    opacity: 0;
+    visibility: 0;
+    height: 100vh;
+  }
+  100%{
+    opacity: 1;
+    visibility: 1;
+    height: 100vh !important;
+  }
+}
+
+@keyframes BodyReset{
+  0%{
+    height: 100vh;
+  }
+
+  80%{
+    height: 100vh;
+  }
+
+  100%{
+    overflow-y: scroll;
+    height: 300vh;
+  }
+}
+
+body{
+  animation: BodyReset var(--animate-time) linear;
+  animation-timing-function: step-end; 
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+body > *{
+  animation: AbsoluteVisible var(--animate-time) linear;
+  animation-delay: calc(var(--animate-time) * 0.75);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
