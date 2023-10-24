@@ -133,7 +133,7 @@ svg{
   display: flex;
   justify-content: center; 
   align-items: center;
-  z-index: 2;
+  z-index: 1;
   background-color: var(--almost-black);
 
   animation: AbsoluteHide 2.5s linear;
@@ -151,7 +151,7 @@ svg{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
 
   animation: CircleZoom 3s linear;
   animation-delay: calc(var(--animate-time) * 0.75);

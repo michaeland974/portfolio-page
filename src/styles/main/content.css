@@ -11,14 +11,15 @@ body > section{
 }
 
 section li{
-  list-style-image: url('./../svg/bullet-point.svg');
+  list-style-image: url('./../../svg/bullet-point.svg');
 }
 
 section li::marker{
   font-size: 1.5em;
 }
 
-.about-me.wrapper{
+.about-me .wrapper, 
+.projects .wrapper{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -51,18 +52,8 @@ section h1{
   transform: translateX(0);
 }
 
-.get-in-touch img{
-  height: 30px;
-  width: 30px;
-  transition: transform 1s;
-}
-
 .get-in-touch a{
   color: var(--dark);
-}
-
-.get-in-touch img:hover{
-  transform: scale(1.2);
 }
 
 .get-in-touch .wrapper{
@@ -82,8 +73,19 @@ section h1{
   gap: 0.5em;
   padding: 0.5em 0 0.5em 0;
 }
-  
-  
+
+.projects ul{
+  display: flex;
+  flex-direction: column;
+} 
+
+.projects .title, 
+.projects .project-links{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
 
 
 

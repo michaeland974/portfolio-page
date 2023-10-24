@@ -8,7 +8,6 @@
     opacity: 0;
     visibility: 0;
   }
-
   100%{
     filter: blur(0px);
     opacity: 1;
@@ -23,10 +22,12 @@ header[role="banner"]{
   height: 100px;
   width: 120vw;
   padding: 1em 0 0 1.5em;
-  /* margin: 1em 0 0 1.5em; */
   z-index: 3;
+  opacity: 0;
+  visibility: 0;
 
-  animation: LongVisible calc(var(--animate-time) * 2) linear;
+  animation: LongVisible var(--animate-time) linear;
+  animation-delay: calc(var(--animate-time) * 0.1);
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;

@@ -70,5 +70,18 @@ body{
   overflow-y: hidden;
 }
 
+img, 
+.project-link-icon{
+  height: 30px;
+  width: 30px;
+  transition: transform 1s;
+}
+
+img:hover, 
+.project-link-icon:hover{
+  transform: scale(1.2);
+}
+
+
 
 

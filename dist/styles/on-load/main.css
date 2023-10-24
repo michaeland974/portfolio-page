@@ -4,10 +4,15 @@
     visibility: 0;
     height: 100vh;
   }
+  90%{
+    opacity: 0;
+    visibility: 0;
+  }
   100%{
     opacity: 1;
     visibility: 1;
     height: 100vh !important;
+    z-index: 3;
   }
 }
 
@@ -23,6 +28,7 @@
   100%{
     overflow-y: scroll;
     height: 300vh;
+    /* z-index: 3; */
   }
 }
 
@@ -37,7 +43,7 @@ body{
 
 body > *{
   animation: AbsoluteVisible var(--animate-time) linear;
-  animation-delay: calc(var(--animate-time) * 0.75);
+  animation-delay: calc(var(--animate-time) * 0.1);
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
