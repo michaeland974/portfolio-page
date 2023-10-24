@@ -104,7 +104,8 @@ section h1{
   padding-bottom: 0.5em;
 }
 
-.project-tags .note{
+.project-tags .note, 
+#flag{
   font-family: Satoshi-LightItalic;
   opacity: 0;
   visibility: 0;
