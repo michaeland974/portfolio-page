@@ -1,0 +1,181 @@
+@keyframes CircleZoom{
+  0%{
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    visibility: 1;
+  }
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    transform: scale(100);
+    opacity: 0;
+    visibilty: 0;
+  }
+}
+
+@keyframes AbsoluteHide{
+  75%{
+    opacity: 1;
+    visibility: 1;
+  }
+  100%{
+    opacity: 0;
+    visibility: 0;
+  }
+}
+
+@keyframes ColorFadeLens{
+  33% {
+    fill: var(--lens3)
+  }
+
+  66%{
+    fill: var(--lens1)
+  }
+
+  100% {
+    fill: var(--lens2)
+  }
+}
+
+@keyframes ColorFadeFrame{
+  33% {
+    fill: var(--frame3)
+  }
+
+  66%{
+    fill: var(--frame1)
+  }
+
+  100%{
+    fill: var(--frame2)
+  }
+}
+
+@keyframes ColorFadeReflect{
+  33% {
+    fill: var(--lens3comp)
+  }
+
+  66%{
+    fill: var(--lens1comp)
+  }
+  100%{
+    fill: var(--lens2comp)
+  }
+}
+
+@keyframes ColorFadeDot{
+  33% {
+    fill: var(--dot3)
+  }
+
+  66%{
+    fill: var(--dot1)
+  }
+  100%{
+    fill: var(--dot2)
+  }
+}
+
+svg{
+  --lens-grey:#333333d8;
+  --lens-white: #c8c8c8;
+  --glasses-grey: #323232;
+
+  --frame1: #AF0BB8;
+  --dot1: #52B80B;
+  --lens1: #4F2652;
+  --lens1comp: #825885;
+
+  --frame2: #e3d4b7;
+  --dot2: #f33a2a;
+  --lens2: #422a6d;
+  --lens2comp: #9689AD;
+
+  --frame3: #12b582;
+  --dot3: #f7f4f6;
+  --lens3: #004b2a;
+  --lens3comp: #197D52;
+}
+
+#svg-wrapper{
+  --animate-time: 2s;
+
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  z-index: -3;
+  background-color: var(--almost-black);
+
+  animation: AbsoluteHide 2.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg-wrapper::after{
+  content:"";
+  border-radius: 50%;
+  background-color: #e3d4b7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+
+  animation: CircleZoom 3.5s linear;
+  animation-delay: calc(var(--animate-time) * 0.75);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg .lens{
+  fill: var(--lens3);
+  animation: ColorFadeLens var(--animate-time);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg .frames{
+  fill: var(--frame3);
+  animation: ColorFadeFrame  var(--animate-time);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg .reflect{
+  fill: var(--lens3comp);
+  animation: ColorFadeReflect var(--animate-time);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#svg .corner-circle{
+  fill: var(--dot3);
+  animation: ColorFadeDot var(--animate-time);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
