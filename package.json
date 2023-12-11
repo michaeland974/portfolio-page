@@ -4,7 +4,7 @@
   "description": "Displaying projects",
   "main": "listeners.js",
   "scripts": {
-    "build": "webpack --watch --config webpack/webpack.config.js",
+    "build": "webpack --watch --config webpack/webpack.config.js --open",
     "watch:build": "tsc --watch"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",
