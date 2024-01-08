@@ -45,7 +45,7 @@ section h1{
 .scrollspy{
   opacity: 0;
   transform: translateX(-5%);
-  transition: all 1s;
+  transition: transform 0.3s linear;
 }
 
 .scrollspy.is-visible{

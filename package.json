@@ -4,7 +4,7 @@
   "description": "Displaying projects",
   "main": "listeners.js",
   "scripts": {
-    "build": "webpack --watch --config webpack/webpack.config.js --open",
+    "build": "webpack --watch --config webpack/webpack.config.js",
     "watch:build": "tsc --watch"
   },
   "author": "",
