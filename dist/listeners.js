@@ -1,1 +1,1 @@
-(()=>{"use strict";const e=document.querySelectorAll(".scrollspy"),s=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting?e.target.classList.add("is-visible"):e.target.classList.remove("is-visible")}))}),{threshold:[.25]});e.forEach((e=>s.observe(e)))})();
+(()=>{"use strict";const e=document.querySelectorAll(".scrollspy"),s=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting?e.target.classList.add("is-visible"):e.target.classList.remove("is-visible")}))}),{threshold:[.72]});e.forEach((e=>s.observe(e)))})();
